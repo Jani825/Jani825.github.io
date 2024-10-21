@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+        .typing-container {
+            font-family: monospace;
+            font-size: 24px;
+            white-space: nowrap;  /* Prevent text wrapping */
+            overflow: hidden;      /* Hide the text that is not visible yet */
+            border-right: 2px solid black; /* Simulate a cursor */
+            width: 0;              /* Start with no text visible */
+            animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; } /* Adjust based on how long the text is */
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="typing-container">This is a typing effect using only CSS.</div>
+
+</body>
+</html>
+
